@@ -1,0 +1,33 @@
+<mat-card>
+    <mat-card-title>Cadastro de Veículo</mat-card-title>
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="ID do Veículo" type="number" id="idVeiculo" name="idVeiculo">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Marca do Veículo" type="text" id="marcaVeiculo" name="marcaVeiculo">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Modelo do Veículo" type="text" id="modeloVeiculo" name="modeloVeiculo">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Ano do Veículo" type="number" id="anoVeiculo" name="anoVeiculo">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Quilometragem do Veículo" type="number" id="quilometragemVeiculo" name="quilometragemVeiculo">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-select placeholder="Status do Veículo" id="statusVeiculo" name="statusVeiculo">
+                <mat-option value="disponivel">Disponível</mat-option>
+                <mat-option value="em_manutencao">Em Manutenção</mat-option>
+                <mat-option value="fora_de_servico">Fora de Serviço</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </form>
+</mat-card>
+
+<div class="buttons">
+    <button mat-raised-button color="primary">Salvar</button>
+    <button mat-raised-button color="primary">Cancelar</button>
+</div>
+

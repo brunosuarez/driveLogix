@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    background-color: #3F51B5;
+    justify-content: space-between;
+}
+
+.logo-img {
+    max-height: 50px;
+}
+
+.login {
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.login a {
+    color: #fff;
+    display: flex; 
+    align-items: center; 
+    font-size: 12px;
+}
+
+.login i {
+    margin-left: 5px;
+}
+
+
