@@ -1,3 +1,26 @@
-<app-header></app-header>
-<app-sidenav></app-sidenav>
-<app-footer></app-footer>
+<ng-container *ngIf="isLoginPage(); else mainContent">
+    <app-login></app-login>
+</ng-container>
+
+<ng-template #mainContent>
+    <app-header></app-header>
+    <ng-container *ngIf="!isLoginPage()">
+        <app-sidenav></app-sidenav>
+        <app-footer></app-footer>
+    </ng-container>
+</ng-template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

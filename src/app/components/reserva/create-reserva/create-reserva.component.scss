@@ -1,10 +1,11 @@
+@import '../.../../../../../styles.scss';
+
 .card {
     display: flex;
 }
 
 form{
-    display: flex;
-    flex-direction: column;
+    @include default-position-form;
 }
 
 button{
@@ -12,7 +13,5 @@ button{
 }
 
 .buttons {
-    display: flex;
-    justify-content: space-between; 
-    margin-top: 16px; 
+    @include default-buttons-form;
 }

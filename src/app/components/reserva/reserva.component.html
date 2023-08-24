@@ -2,9 +2,9 @@
   <h2>Reservas</h2>
   <mat-form-field>
     <input matInput (keyup)="applyFilter($event)" placeholder="Filtrar">
-  </mat-form-field>
+  </mat-form-field><br>
 
-  <button mat-raised-button color="primary" routerLink="/reserva/create-reserve">Nova Reserva</button>
+  <button mat-raised-button color="primary" routerLink="/reserva/create-reserve">Nova Reserva</button><br><br>
 
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 

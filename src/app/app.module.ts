@@ -17,6 +17,8 @@ import { DiarioComponent } from './components/diario/diario.component';
 import { RelatorioComponent } from './components/relatorio/relatorio.component';
 import { HomeComponent } from './components/home/home.component';
 import { CreateReservaComponent } from './components/reserva/create-reserva/create-reserva.component';
+import { LoginComponent } from './components/login/login.component';
+import { CreateContaComponent } from './components/create-conta/create-conta.component';
 
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
@@ -33,7 +35,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatTableModule } from '@angular/material/table';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,6 +54,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     MotoristaComponent,
     VeiculoComponent,
     CreateReservaComponent,
+    LoginComponent,
+    CreateContaComponent,
   ],
   imports: [
     BrowserModule,
@@ -69,7 +75,10 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatSelectModule,
     MatTableModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatCheckboxModule,
+    SlickCarouselModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

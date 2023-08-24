@@ -9,10 +9,14 @@ import { VeiculosComponent } from './components/veiculos/veiculos.component';
 import { ReservaComponent } from './components/reserva/reserva.component';
 import { HomeComponent } from './components/home/home.component';
 import { CreateReservaComponent } from './components/reserva/create-reserva/create-reserva.component';
+import { LoginComponent } from './components/login/login.component';
+import { CreateContaComponent } from './components/create-conta/create-conta.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'create-conta', component: CreateContaComponent },
   { path: 'cadastro', children: [
     { path: 'motorista', component: MotoristaComponent },
     { path: 'veiculo', component: VeiculoComponent }

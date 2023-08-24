@@ -1,5 +1,5 @@
 <mat-card class="card">
-  <mat-card-title>Cadastro de Motorista</mat-card-title>
+  <mat-card-title class="title">Cadastro de Motorista</mat-card-title>
   <form>
     <mat-form-field class="full-width">
       <input matInput placeholder="ID do Motorista" type="number" id="idMotorista" name="idMotorista">
@@ -19,13 +19,13 @@
     <mat-form-field class="full-width">
       <input matInput placeholder="Gerente" type="text" id="gerente" name="gerente">
     </mat-form-field>
+    <a mat-fab color="primary">
+      <mat-icon>image</mat-icon>
+    </a>
   </form>
-  <a mat-fab color="primary" aria-label="Example icon button with a delete icon">
-    <mat-icon>image</mat-icon>
-  </a>
+  
+  <div class="buttons">
+    <button mat-raised-button color="primary">Salvar</button>
+    <button mat-raised-button color="primary">Cancelar</button>
+  </div>
 </mat-card>
-
-<div class="buttons">
-  <button mat-raised-button color="primary">Salvar</button>
-  <button mat-raised-button color="primary">Cancelar</button>
-</div>

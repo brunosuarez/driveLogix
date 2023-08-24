@@ -1,6 +1,10 @@
 .header {
-    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
     background-color: #3F51B5;
+    display: flex;
     justify-content: space-between;
 }
 
@@ -8,21 +12,25 @@
     max-height: 50px;
 }
 
-.login {
+.options-header {
     color: #fff;
     display: flex;
     align-items: center;
 }
 
-.login a {
+.options-header a {
     color: #fff;
     display: flex; 
     align-items: center; 
     font-size: 12px;
+    cursor: pointer;
+    text-decoration: none;
 }
 
-.login i {
+.options-header i {
     margin-left: 5px;
 }
 
-
+.main-content {
+    padding-top: 64px;
+}
