@@ -1,31 +1,5 @@
-<div class="cards">
-    <mat-card class="card">
-        <mat-card-header>
-            <mat-card-title class="centered-title">Veículos</mat-card-title>
-        </mat-card-header>
-        <img mat-card-image src="../../../assets/images/truck.jpeg" alt="vehicle">
-        <mat-card-content>
-            <p>
-                Faça o controle dos veículos de forma precisa e transparente.
-                Dê visbilidade aos dados completos que envolva os veículos do seu setor.
-            </p>
-        </mat-card-content>
-    </mat-card>
-    
-    <mat-card class="card">
-        <mat-card-header>
-            <mat-card-title class="centered-title">Viagens</mat-card-title>
-        </mat-card-header>
-        <img mat-card-image src="../../../assets/images/route.jpeg" alt="routes">
-        <mat-card-content>
-            <p>
-                Tenha o controle total das viagens, motoristas, rotas e diários de bordo.
-            </p>
-        </mat-card-content>
-    </mat-card>
-</div>
-
-
-
-
-  
+<ngx-slick-carousel class="carousel" [config]="carouselConfig">
+    <div *ngFor="let slide of slides" class="slide">
+        <img [src]="slide.image" class="slide-image">
+    </div>
+</ngx-slick-carousel>

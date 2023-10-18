@@ -6,7 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  slides = [
+    {
+      image: '../../../assets/images/cad.png',
+     },
+    {
+      image: '../../../assets/images/gestao.png',
+    },
+    {
+      image: '../../../assets/images/report.png',
+    }
+  ];
 
+  carouselConfig = {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    navigation: true,
+    pagination: { clickable: true },
+    loop: true,
+    autoplay: { delay: 3000 },
+  };
 }
-
-

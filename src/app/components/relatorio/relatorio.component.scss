@@ -1,11 +1,17 @@
-.card{
-    display: block;
+@import '../../../styles.scss';
+
+.card {
     padding: 10px;
 }
 
-.form-field {
-    margin: 0 8px 16px 0;
+.title {
+    @include default-position-mat-title;
 }
 
+form{
+    @include default-position-form;
+}
 
-  
+.buttons {
+    @include default-buttons-form;
+}
