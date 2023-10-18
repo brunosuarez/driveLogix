@@ -13,9 +13,6 @@ export class HomeComponent {
     {
       image: '../../../assets/images/gestao.png',
     },
-    {
-      image: '../../../assets/images/report.png',
-    }
   ];
 
   carouselConfig = {
