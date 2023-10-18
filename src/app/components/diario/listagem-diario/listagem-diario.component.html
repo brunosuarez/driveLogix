@@ -1,9 +1,11 @@
 <div class="container">
-  <h2>Diário de Bordo</h2>
+  <h2>Diários de Bordo</h2>
 
   <mat-form-field>
     <input matInput (keyup)="applyFilter($event)" placeholder="Buscar">
-  </mat-form-field>
+  </mat-form-field><br>
+
+  <button mat-raised-button color="primary" routerLink="/diario/cadastro">Novo Diário</button><br><br>
 
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
