@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { DateAdapter } from '@angular/material/core';
-import { Diario } from '../diario/diario';
-import { Reserva } from '../reserva/reserva';
 import { MatDatepickerInputEvent } from '@angular/material/datepicker';
 
 @Component({
@@ -20,36 +18,74 @@ export class RelatorioComponent {
   }
 
   gerarRelatorio() {
+    // Simulando dados de reservas e diários
+    const exemploReservas = [
+      {
+        idReserva: 1,
+        dtHoraReserva: '2023-10-01T10:00:00',
+        nomeMotorista: 'Motorista 1',
+        solicitanteReserva: 'Solicitante 1',
+        rota: 'Rota 1',
+      },
+      {
+        idReserva: 2,
+        dtHoraReserva: '2023-10-02T11:30:00',
+        nomeMotorista: 'Motorista 2',
+        solicitanteReserva: 'Solicitante 2',
+        rota: 'Rota 2',
+      },
+    ];
+
+    const exemploDiarios = [
+      {
+        dtHoraInicio: new Date('2023-10-17T10:00:00'),
+        dtHoraTermino: new Date('2023-10-17T12:00:00'),
+        localPartida: 'Local de Partida 1',
+        localDestino: 'Local de Destino 1',
+        qtdeParadas: 3,
+        quilometragemPercorrida: 120,
+        observacoes: 'Observações 1',
+      },
+      {
+        dtHoraInicio: new Date('2023-10-17T13:00:00'),
+        dtHoraTermino: new Date('2023-10-17T15:30:00'),
+        localPartida: 'Local de Partida 2',
+        localDestino: 'Local de Destino 2',
+        qtdeParadas: 2,
+        quilometragemPercorrida: 150,
+        observacoes: 'Observações 2',
+      },
+    ];
+
+    // Aqui você pode adicionar mais dados de exemplo ou ajustar os existentes.
+
     const dataInicial = this.campaignOne.start;
     const dataFinal = this.campaignOne.end;
     const idVeiculo = this.idVeiculo;
 
-    const reservas: Reserva[] = JSON.parse(localStorage.getItem('reservas') || '[]');
-    const diarios: Diario[] = JSON.parse(localStorage.getItem('diarios') || '[]');
-
-    const reservasFiltradas = reservas.filter((reserva) => {
+    const reservasFiltradas = exemploReservas.filter((reserva) => {
       const dataReserva = new Date(reserva.dtHoraReserva);
       return (
         dataReserva >= dataInicial &&
-        dataReserva <= dataFinal &&
-        reserva.idVeiculo === idVeiculo
+        dataReserva <= dataFinal 
       );
     });
 
-    const diariosFiltrados = diarios.filter((diario) => {
+    const diariosFiltrados = exemploDiarios.filter((diario) => {
       const dataDiarioInicio = new Date(diario.dtHoraInicio);
       const dataDiarioTermino = new Date(diario.dtHoraTermino);
       return (
         dataDiarioInicio >= dataInicial &&
-        dataDiarioTermino <= dataFinal &&
-        diario.idVeiculo === idVeiculo
+        dataDiarioTermino <= dataFinal
       );
     });
+
     const relatorio = {
       reservas: reservasFiltradas,
       diarios: diariosFiltrados,
     };
-    this.relatorio = relatorio; 
+
+    this.relatorio = relatorio;
   }
 
   startDateSelected(event: MatDatepickerInputEvent<Date>): void {
