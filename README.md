@@ -10,5 +10,5 @@ Funcionalidades:<br>
 *Consulta de Diário de Bordo.<br>
 *Geração de Relatórios.
 
-Para rodar esse projeto basta acessar o diretorio app/drive-logix e digitar ng serve -o, o projeto irá executar na 4200
+Para rodar esse projeto basta acessar o diretorio `app/drive-logix` e digitar `ng serve -o`, o projeto irá executar na 4200
 
